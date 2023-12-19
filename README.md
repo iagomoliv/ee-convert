@@ -55,3 +55,32 @@ After converting your images, you can upload them as assets into GEE.
 If your original PNG images have a transparent background, select the **Use last band as alpha band** option in **Masking mode** during uploading. This step is crucial to handle the transparency in the images correctly.
 
 <img src="https://github.com/iagomoliv/ee-convert/blob/main/img/masking-mode.png?raw=true" width=40% height=auto>
+
+### Using the imported image as a logo
+
+After importing your image into the GEE, you can use it as a logo in your GEE-developed app. To do this, you will use the `ui.Thumbnail` widget. Here is a basic example of how to add the logo to your app:
+
+```javascript
+// Load the imported image
+var image = ee.Image('YOUR_IMAGE_ID');
+
+// Create a thumbnail of the image
+var logo = ui.Thumbnail({
+    image: image,
+    params: { dimensions: 1080 },
+    style: { width: '126px', margin: '20px 8px' }
+});
+
+// Add a placeholder for text
+var text = ui.Label('Lorem ipsum dolor sit amet...');
+
+// Add the thumbnail to a panel (e.g., to the main panel)
+var panel = ui.Panel([logo, text], 'flow', { width: '400px' });
+
+// Add the panel to the UI
+Map.add(panel);
+```
+
+**Note:** Make sure to adjust the parameters in `ui.Thumbnail` as needed, including the bands and dimensions of the image.
+
+<img src="https://github.com/iagomoliv/ee-convert/blob/main/img/olab-example.png?raw=true" width=40% height=auto>
