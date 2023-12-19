@@ -53,3 +53,5 @@ After converting your images, you can upload them as assets into Google Earth En
 **Note on transparent backgrounds**
 
 If your original PNG images have a transparent background, select the "Use last band as alpha band" option in "Masking mode" during uploading. This step is crucial to handle the transparency in the images correctly.
+
+<img src="img/masking-mode.png">
