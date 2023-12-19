@@ -1,5 +1,5 @@
 # ee-convert
-Convert PNG and JPG images to GeoTIFF format, optimized for integration with Google Earth Engine.
+Convert PNG and JPG images to GeoTIFF format, optimized for integration with [Google Earth Engine](https://earthengine.google.com/) (GEE).
 
 ## Installation
 
@@ -26,13 +26,13 @@ Within the virtual environment, install the project's dependencies with the foll
 pip install -r requirements.txt
 ```
 
+## Usage
+
 ### Prepare images
 
 Copy the images you want to convert into the `input` folder.
 
-## Usage
-
-After installation, you can run the project with:
+Now you can convert the images with:
 
 ```bash
 python main.py
@@ -42,9 +42,9 @@ Once `main.py` is executed, the converted images will be available in the `outpu
 
 ## Uploading into Google Earth Engine
 
-After converting your images, you can upload them as assets into Google Earth Engine.
+After converting your images, you can upload them as assets into GEE.
 
-1. Go to the GEE Code Editor.
+1. Go to the GEE [Code Editor](https://code.earthengine.google.com/).
 2. Click on the `Assets` tab.
 3. Select `New` and then `GeoTIFF` under **Image Upload**.
 4. Click the **Select** button to choose the converted GeoTIFF files from the `output` folder.
@@ -52,6 +52,6 @@ After converting your images, you can upload them as assets into Google Earth En
 
 **Note on transparent backgrounds**
 
-If your original PNG images have a transparent background, select the "Use last band as alpha band" option in "Masking mode" during uploading. This step is crucial to handle the transparency in the images correctly.
+If your original PNG images have a transparent background, select the **Use last band as alpha band** option in **Masking mode** during uploading. This step is crucial to handle the transparency in the images correctly.
 
 <img src="https://github.com/iagomoliv/ee-convert/blob/main/img/masking-mode.png?raw=true" width=40% height=auto>
