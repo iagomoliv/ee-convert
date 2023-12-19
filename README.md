@@ -28,7 +28,7 @@ pip install -r requirements.txt
 
 ### Prepare images
 
-Copy the images you want to convert into the `input_images` folder.
+Copy the images you want to convert into the `input` folder.
 
 ## Usage
 
@@ -38,7 +38,7 @@ After installation, you can run the project with:
 python main.py
 ```
 
-Once `main.py` is executed, the converted images will be available in the `converted_images` folder.
+Once `main.py` is executed, the converted images will be available in the `output` folder.
 
 ## Uploading into Google Earth Engine
 
@@ -47,7 +47,7 @@ After converting your images, you can upload them as assets into Google Earth En
 1. Go to the GEE Code Editor.
 2. Click on the `Assets` tab.
 3. Select `New` and then `GeoTIFF` under **Image Upload**.
-4. Click the **Select** button to choose the converted GeoTIFF files from the `converted_images` folder.
+4. Click the **Select** button to choose the converted GeoTIFF files from the `output` folder.
 5. Fill out the necessary metadata for your image and click `Upload`.
 
 **Note on transparent backgrounds**
