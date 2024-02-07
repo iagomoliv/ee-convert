@@ -4,8 +4,8 @@ from rasterio.crs import CRS
 from rasterio.transform import from_bounds
 
 # Input and output directories
-input_path = 'input_images'
-output_path = 'converted_images'
+input_path = 'input'
+output_path = 'output'
 
 # Create output directory if it doesn't exist
 if not os.path.exists(output_path):
